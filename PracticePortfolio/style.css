@@ -25,3 +25,43 @@ a {
     text-decoration: none;
     color: #ddd;
 }
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+#projects {
+    max-width: 1200px;
+    margin: auto;
+}
+.project-tile {
+    height: 400px;
+    width: 400px;
+    background-color: aquamarine;
+}
+.project-image {
+    height: auto;
+    width: 100%;
+}
+.paragraph-style {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 55px;
+}
+#contact {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 30px;
+}
+#profile-link {
+    color: black;
+}
+@media screen and (max-width: 1420px) {
+    li {
+        margin-left: 15px;
+    }
+}
