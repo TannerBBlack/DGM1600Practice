@@ -60,8 +60,21 @@ a {
 #profile-link {
     color: black;
 }
+
+#StarWars {
+    padding: 50px;
+    text-align: center;
+}
 @media screen and (max-width: 1420px) {
     li {
         margin-left: 15px;
     }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
 }
