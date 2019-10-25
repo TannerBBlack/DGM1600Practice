@@ -30,5 +30,3 @@ people.forEach(function (pilot) {
 
     tableBody.appendChild(row);
 });
-
-

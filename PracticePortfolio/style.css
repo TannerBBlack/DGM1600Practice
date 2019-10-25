@@ -36,6 +36,8 @@ a {
 #projects {
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    justify-content: space-around;
 }
 .project-tile {
     height: 400px;
@@ -64,6 +66,7 @@ a {
 #StarWars {
     padding: 50px;
     text-align: center;
+    display: grid;
 }
 @media screen and (max-width: 1420px) {
     li {
