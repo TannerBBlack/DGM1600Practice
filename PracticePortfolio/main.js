@@ -30,3 +30,5 @@ people.forEach(function (pilot) {
 
     tableBody.appendChild(row);
 });
+
+//lets fix this
