@@ -31,4 +31,20 @@ people.forEach(function (pilot) {
     tableBody.appendChild(row);
 });
 
-//lets fix this
+//using a returned async data. May need to add code somewhere...
+let allSenators = []
+const theData = getAPIData('senators.json').then(data => {
+    allSenators = data.results[0].members
+})
+
+//rep/dem filter 
+const republicans = allSenators.filter(senator => senator.party === 'R')
+const demacrates = allSenators.filter(senator => senator.party === 'D')
+
+console.log(republicans, demacrates)
+
+const container = document.querySelector('.container')
+
+function populateDOM(senatorArray) {
+    let 
+}
