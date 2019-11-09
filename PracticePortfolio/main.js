@@ -49,3 +49,4 @@ function populateDOM(senatorArray) {
     let card = document.createElement('div')
     card.setAttribute('class')
 }
+//video at 14:15
