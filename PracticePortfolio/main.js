@@ -46,5 +46,6 @@ console.log(republicans, demacrates)
 const container = document.querySelector('.container')
 
 function populateDOM(senatorArray) {
-    let 
+    let card = document.createElement('div')
+    card.setAttribute('class')
 }
