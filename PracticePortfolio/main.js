@@ -50,3 +50,9 @@ function populateDOM(senatorArray) {
     card.setAttribute('class')
 }
 //video at 14:15
+
+// better card code
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
