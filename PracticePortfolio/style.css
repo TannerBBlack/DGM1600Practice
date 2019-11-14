@@ -97,6 +97,14 @@ table, th, td {
     transform: rotateY(180deg);
   }
   
+  .scene {
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+
   .card__face {
     position: absolute;
     width: 100%;
