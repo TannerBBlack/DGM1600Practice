@@ -83,6 +83,13 @@ table, th, td {
 }
 
 /*better card format*/
+.scene {
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 40px 0;
+    perspective: 600px;
+  }
 
 .card {
     width: 100%;
@@ -95,14 +102,6 @@ table, th, td {
   
   .card.is-flipped {
     transform: rotateY(180deg);
-  }
-  
-  .scene {
-    width: 200px;
-    height: 260px;
-    border: 1px solid #CCC;
-    margin: 40px 0;
-    perspective: 600px;
   }
 
   .card__face {
