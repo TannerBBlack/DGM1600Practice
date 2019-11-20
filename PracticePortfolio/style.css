@@ -82,6 +82,11 @@ table, th, td {
     border: 1px solid black;
 }
 
+/* td {
+    text-align: start;
+    vertical-align: top;
+} */
+
 /*better card format*/
 .scene {
     width: 200px;

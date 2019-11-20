@@ -39,7 +39,7 @@ function addPilotImage(pilot) {
     pilotNumber = pilotNumber.substring(0, pilotNumber.indexOf('/'));
     var pilotJpg = pilotNumber + '.jpg'
     pilotImage.setAttribute("src", "https://starwars-visualguide.com/assets/img/characters/" + pilotJpg);
-    pilotImage.setAttribute("width", "100");
+    pilotImage.setAttribute("width", "120");
     pilotImage.setAttribute("height", "150");
     pilotImage.setAttribute("alt", pilot.name);
     return pilotImage;
