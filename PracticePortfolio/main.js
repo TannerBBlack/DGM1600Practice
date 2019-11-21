@@ -33,6 +33,7 @@ people.forEach(function (pilot) {
     tableBody.appendChild(row);
 });
 
+
 function addPilotImage(pilot) {
     var pilotImage = document.createElement("IMG");
     var pilotNumber = pilot.url.substring(28);
@@ -82,19 +83,6 @@ function addStarshipImage(starship) {
 //      getData()
 //      create from the loop of the array elements that match the cards with the senator names 
 //      create from the loop the add listener event for the click 
-// var card1 = document.getElementById('card1');
-// card1.addEventListener( 'click', function() {
-// //  getData();
-//   console.log('clicked it');
-//   card1.classList.toggle('is-flipped');
-// });
-
-// var card2 = document.getElementById('card2');
-// card2.addEventListener( 'click', function() {
-// //  getData();
-//   console.log('clicked it');
-//   card2.classList.toggle('is-flipped');
-// });
 
 // function readTextFile(file, callback) {
 //     var rawFile = new XMLHttpRequest();
