@@ -2,10 +2,15 @@ import { starships } from "./starships.js";
 //console.log("Starship list", starships);
 var containerDiv = document.getElementById('cardContainer');
 var shipSelectorDiv = document.getElementById('shipselector');
+var remainingShipOptions = ["select a ship"];
+
+
 
 starships.forEach(function (starship, index) {
     if (index < 25) {
        containerDiv.appendChild(addStarshipCard(starship, index));
+    } else {
+        remainingShipOptions.push(starship.name);
     }
 })
 
@@ -14,6 +19,8 @@ starships.forEach(function (starship, index) {
        addFlipListeners(index);
     }
 });
+
+shipSelectorDiv.appendChild(addNewStarshipSelector(remainingShipOptions));
 
 function addStarshipCard(starship, index) {
     var sceneDiv = document.createElement('DIV'); //creates a <div></div>
@@ -70,8 +77,17 @@ function addStarshipStats(starship) {
     return starshipStats;
 }
 
-function addNewStarshipSelector() {
-
+function addNewStarshipSelector(options) {
+    var starshipSelector = document.createElement("SELECT");
+    starshipSelector.setAttribute("id", "selectedShip");
+    starshipSelector.setAttribute("onchange", "addAnotherShip()");
+    options.forEach(function (starshipName) {
+        var option = document.createElement("OPTION");
+        option.setAttribute("value", starshipName);
+        option.setAttribute("label", starshipName);
+        starshipSelector.appendChild(option);
+    })
+    return starshipSelector;
 }
 
 //<div>
