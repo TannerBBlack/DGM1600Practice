@@ -37,7 +37,8 @@ a {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-between; */
+    align-content: space-around;
 }
 .project-tile {
     height: 400px;
