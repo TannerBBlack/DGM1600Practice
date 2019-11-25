@@ -1,5 +1,5 @@
+// import { starships } from "./starships.js";
 var shipIndex = 25;
-
 
 function addAnotherShip(starships) {
     var selectedElement = document.getElementById("selectedShip");
