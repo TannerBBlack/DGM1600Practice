@@ -1,4 +1,5 @@
 import { starships } from "./starships.js";
+let myStarship = starships;
 //console.log("Starship list", starships);
 var containerDiv = document.getElementById('cardContainer');
 var shipSelectorDiv = document.getElementById('shipselector');
@@ -20,7 +21,32 @@ starships.forEach(function (starship, index) {
     }
 });
 
-shipSelectorDiv.appendChild(addNewStarshipSelector(remainingShipOptions));
+//shipSelectorDiv.appendChild(addNewStarshipSelector(remainingShipOptions));
+var app = {
+    test: "Hello world !",
+    testFunction: function () {
+        console.log("called from test function");
+    },
+    addNewStarshipSelector: function (options) {
+        var self = this;
+        var starshipSelector = document.createElement("SELECT");
+        starshipSelector.setAttribute("id", "selectedShip");
+
+        starshipSelector.addEventListener('change', function() {
+            self.testFunction();
+        });
+
+        options.forEach(function (starshipName) {
+            var option = document.createElement("OPTION");
+            option.setAttribute("value", starshipName);
+            option.setAttribute("label", starshipName);
+            starshipSelector.appendChild(option);
+        })
+        return starshipSelector;
+    },
+};
+
+shipSelectorDiv.appendChild(app.addNewStarshipSelector(remainingShipOptions));
 
 function addStarshipCard(starship, index) {
     var sceneDiv = document.createElement('DIV'); //creates a <div></div>
@@ -77,10 +103,17 @@ function addStarshipStats(starship) {
     return starshipStats;
 }
 
+/*
 function addNewStarshipSelector(options) {
+    var self = this;
     var starshipSelector = document.createElement("SELECT");
     starshipSelector.setAttribute("id", "selectedShip");
-    starshipSelector.setAttribute("onchange", "addAnotherShip()");
+
+    starshipSelector.addEventListener('change', function(event) {
+        //console.log(event.srcElement.value);
+        console.log(self.test);
+    });
+
     options.forEach(function (starshipName) {
         var option = document.createElement("OPTION");
         option.setAttribute("value", starshipName);
@@ -89,6 +122,17 @@ function addNewStarshipSelector(options) {
     })
     return starshipSelector;
 }
+*/
+/*
+document.querySelector('#shipSelector').addEventListener('onChange', () => {
+    var shipIndex = 25;
+
+    console.log(myStarship);
+    var selectedElement = document.getElementById("selectedShip");
+    var shipName = selectedElement.options[selectedElement.selectedIndex].value;
+    console.log(shipName, shipIndex++);
+})
+*/
 
 //<div>
 //  <p>Cost: </p>
