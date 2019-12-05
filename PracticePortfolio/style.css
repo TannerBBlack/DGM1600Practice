@@ -83,6 +83,11 @@ table, th, td {
     border: 1px solid black;
 }
 
+.controlpilotimage {
+    display: block;
+    margin: auto;
+}
+
 /* td {
     text-align: start;
     vertical-align: top;

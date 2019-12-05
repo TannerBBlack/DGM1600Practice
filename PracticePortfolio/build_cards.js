@@ -30,6 +30,7 @@ var app = {
 
 			let card = self.addStarshipCard(starship, self.starshipCardIndex);
 			document.getElementById('cardContainer').appendChild(card);
+			self.addFlipListeners(self.starshipCardIndex);
         });
 
         options.forEach(function (starshipName) {
