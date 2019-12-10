@@ -1,6 +1,5 @@
 import { starships } from "./starships.js";
 let myStarship = starships;
-//console.log("Starship list", starships);
 var containerDiv = document.getElementById('cardContainer');
 var shipSelectorDiv = document.getElementById('shipselector');
 var remainingShipOptions = ["select a ship"];
@@ -62,11 +61,16 @@ var app = {
 	
 	
 	addStarshipImage: function (starship) {
+		var noImage = ["65", "59", "74", "49", "77", "64", "3", "61", "17", "32", "52", "58", "63", "66", "75", "2", "68"];
 		var starshipImage = document.createElement("IMG");
 		var starshipNumber = starship.url.substring(31);
 		starshipNumber = starshipNumber.substring(0, starshipNumber.indexOf('/'));
 		var starshipJpg = starshipNumber + '.jpg'
-		starshipImage.setAttribute("src", "https://starwars-visualguide.com/assets/img/starships/" + starshipJpg);
+	    if (noImage.indexOf(starshipNumber) > -1) {
+			starshipImage.setAttribute("src", "https://askleo.com/wp-content/uploads/2004/06/no_image-300x245.jpg");
+		} else {
+			starshipImage.setAttribute("src", "https://starwars-visualguide.com/assets/img/starships/" + starshipJpg);
+		}
 		starshipImage.setAttribute("width", "200");
 		starshipImage.setAttribute("height", "150");
 		starshipImage.setAttribute("alt", starship.name);

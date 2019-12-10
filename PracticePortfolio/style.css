@@ -34,11 +34,10 @@ a {
     height: 100vh;
 }
 #projects {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: auto;
     display: flex;
-    /* justify-content: space-between; */
-    align-content: space-around;
+    justify-content: space-around;
 }
 .project-tile {
     height: 400px;
@@ -65,6 +64,7 @@ a {
 }
 
 #StarWars {
+    background-color: rgb(196, 196, 196);
     padding: 50px;
     text-align: center;
     display: grid;
@@ -77,23 +77,27 @@ a {
 
 table {
     border-collapse: collapse;
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 5px solid black;
 }
 
 .controlpilotimage {
     display: block;
     margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
 }
 
-/* td {
-    text-align: start;
-    vertical-align: top;
-} */
+#StarWarsCards{
+background-color: rgb(196, 196, 196);
+text-align: center;
+}
 
-/*better card format*/
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -102,9 +106,9 @@ table, th, td {
 .scene {
     width: 200px;
     height: 150px;
-    border: 1px solid #CCC;
-    margin: 40px 0;
     perspective: 600px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
   }
 
 .card {
@@ -114,6 +118,7 @@ table, th, td {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border: 2px solid black;
   }
   
   .card.is-flipped {
@@ -143,4 +148,8 @@ table, th, td {
 
 .card__face--back p {
     font-size: 12px;
+}
+
+#shipselector {
+    margin-bottom: 80px;
 }

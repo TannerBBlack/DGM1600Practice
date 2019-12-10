@@ -52,11 +52,16 @@ function addPilotImage(pilot) {
 }
 
 function addStarshipImage(starship) {
+    var noImage = ["65", "59", "74", "49", "77", "64"];
     var starshipImage = document.createElement("IMG");
     var starshipNumber = starship.url.substring(31);
     starshipNumber = starshipNumber.substring(0, starshipNumber.indexOf('/'));
     var starshipJpg = starshipNumber + '.jpg'
-    starshipImage.setAttribute("src", "https://starwars-visualguide.com/assets/img/starships/" + starshipJpg);
+    if (noImage.indexOf(starshipNumber) > -1) {
+        starshipImage.setAttribute("src", "https://askleo.com/wp-content/uploads/2004/06/no_image-300x245.jpg");
+    } else {
+        starshipImage.setAttribute("src", "https://starwars-visualguide.com/assets/img/starships/" + starshipJpg);
+    }
     starshipImage.setAttribute("width", "200");
     starshipImage.setAttribute("height", "150");
     starshipImage.setAttribute("alt", starship.name);
